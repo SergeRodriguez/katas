@@ -13,17 +13,23 @@ let repeatNumbers = function (data) {
     }
   }
 
-  for (i = 1; i < newArr.length; i++) {
-    if (newArr[i] !== newArr[i - 1] && newArr[i] !== "," && newArr[i] !== " ") {
-      newArr.splice((i - 1), 0, ",", " ");
-
+  let newArr2 = [];
+  for (i = 0; i < newArr.length; i++) {
+    if (newArr[i] !== newArr[i + 1] && newArr[i + 1] !== undefined) {
+      newArr2.push(newArr[i]);
+      newArr2.push(",");
+      newArr2.push(" ");
+    } else {
+      newArr2.push(newArr[i]);
     }
   }
 
-  return newArr;
+  newArr2 = newArr2.join("")
+
+  return newArr2;
 }
 
 
-//console.log(repeatNumbers([[1, 10]])); // 1111111111
+console.log(repeatNumbers([[1, 10]])); // 1111111111
 console.log(repeatNumbers([[1, 2], [2, 3]])); // 11, 222
-//console.log(repeatNumbers([[10, 4], [34, 6], [92, 2]])); // 10101010, 343434343434, 9292
+console.log(repeatNumbers([[10, 4], [34, 6], [92, 2]])); // 10101010, 343434343434, 9292
