@@ -7,9 +7,15 @@ let camelCase = function (input) {
     }
   }
 
+  arr = arr.join("");
+
+  arr = arr.replace(/\s+/g, "");
+
   return arr;
 };
 
+
+
 console.log(camelCase("this is a string")); // thisIsAString
-//console.log(camelCase("loopy lighthouse")); // loopyLighthouse
-//console.log(camelCase("supercalifragalisticexpialidocious")); // supercalifragalisticexpialidocious
+console.log(camelCase("loopy lighthouse")); // loopyLighthouse
+console.log(camelCase("supercalifragalisticexpialidocious")); // supercalifragalisticexpialidocious
