@@ -15,9 +15,9 @@ let talkingCalendar = function (date) {
     return months[Number(arrDate[1]) - 1] + " " + days[Number(arrDate[2]) - 1] + arrDate[0];
 };
 
-console.log(talkingCalendar("2017/12/02"));
-console.log(talkingCalendar("2007/11/11"));
-console.log(talkingCalendar("1987/08/27"));
+console.log(talkingCalendar("1995/09/12"));
+//console.log(talkingCalendar("2007/11/11"));
+//console.log(talkingCalendar("1987/08/27"));
 
 //December 2nd, 2017
 //November 11th, 2007
