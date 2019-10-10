@@ -17,30 +17,30 @@ function promptGuess() {
 
   let guess = prompt("Guess a number: ");
   guess = Number(guess);
- 
 
-  if (isNaN(guess)){
+
+  if (isNaN(guess)) {
     console.log("Not a number! Try again!");
     return promptGuess();
   }
- 
+
   if (guessArr.length === 0) {
     guessArr[0] = guess;
-  } else if (guessArr.indexOf(guess) === -1){
+  } else if (guessArr.indexOf(guess) === -1) {
     guessArr.push(guess);
   }
-   else {
-     console.log("Already Guessed!");
-     return promptGuess();
+  else {
+    console.log("Already Guessed!");
+    return promptGuess();
   }
- 
+
   if (guess > answer) {
     console.log("Too High!");
     promptGuess();
   } else if (guess < answer) {
     console.log("Too Low");
     promptGuess();
-  } else {console.log("You got it! You took " + guessArr.length + " attempts!")}
+  } else { console.log("You got it! You took " + guessArr.length + " attempts!") }
 }
 
 promptGuess();
